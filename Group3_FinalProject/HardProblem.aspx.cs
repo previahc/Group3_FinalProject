@@ -9,68 +9,78 @@ namespace Group3_FinalProject
 {
     public partial class HardProblem : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            string numbersInput = txtNumbers.Text.Trim();
+            if (!string.IsNullOrEmpty(numbersInput))
             {
-                ddlProblems.Items.Add(new ListItem("Hard Problem: Distribute Elements Equally"));
+                int[] nums = numbersInput.Split(',').Select(int.Parse).ToArray();
+                int[] result = DistributeArray(nums);
+                lblResult.Text = "Distributed Array: " + string.Join(", ", result);
+            }
+            else
+            {
+                lblResult.Text = "Please enter numbers separated by commas.";
             }
         }
 
-        protected void btnSolve_Click(object sender, EventArgs e)
-        {
-            if (ddlProblems.SelectedIndex == 0)
-            {
-                int[] nums = { 3, 4, 1, 2, 7, 5, 6 };
-                int[] result = DistributeElements(nums);
-                lblSolution.Text = string.Join(", ", result);
-            }
-        }
-
-        public int[] DistibutionElements(int[] nums)
+        public int[] DistributeArray(int[] nums)
         {
             int n = nums.Length;
-            List<int> arr1 = new List<int>();
-            List<int> arr2 = new List<int>();
+            int[] arr1 = new int[n / 2];
+            int[] arr2 = new int[n - n / 2];
 
-            arr1.Add(nums[0]);
-
-            for (int i = 1; i < n; i++)
+            // Initialize arr1 and arr2 with the first n/2 and remaining elements of nums, respectively
+            for (int i = 0; i < n / 2; i++)
             {
-                int count1 = GreaterCount(arr1.ToArray(), nums[i]);
-                int count2 = GreaterCount(arr2.ToArray(), nums[i]);
+                arr1[i] = nums[i];
+            }
+            for (int i = n / 2; i < n; i++)
+            {
+                arr2[i - n / 2] = nums[i];
+            }
 
-                if (count1 > count2 || (count1 == count2 && arr1.Count <= arr2.Count))
+            for (int i = 2; i < n; i++)
+            {
+                int count1 = greaterCount(arr1, nums[i]);
+                int count2 = greaterCount(arr2, nums[i]);
+
+                if (count1 > count2)
                 {
-                    arr1.Add(nums[i]);
+                    arr1 = append(arr1, nums[i]);
+                }
+                else if (count1 < count2)
+                {
+                    arr2 = append(arr2, nums[i]);
                 }
                 else
                 {
-                    arr2.Add(nums[i]);
+                    if (arr1.Length <= arr2.Length)
+                    {
+                        arr1 = append(arr1, nums[i]);
+                    }
+                    else
+                    {
+                        arr2 = append(arr2, nums[i]);
+                    }
                 }
             }
 
-            List<int> result = new List<int>(arr1);
-            result.AddRange(arr2);
-            return result.ToArray();
+            return arr1.Concat(arr2).ToArray();
         }
 
-        public int GreaterCount(int[] arr, int val)
+        private int greaterCount(int[] arr, int val)
         {
-            int count = 0;
-            foreach (int num in arr)
-            {
-                if (num > val)
-                {
-                    count++;
-                }
-            }
-            return count;
+            return arr.Count(x => x > val);
         }
 
-        protected System.Void ddlProblems_SelectedIndexChanged()
+        private int[] append(int[] arr, int val)
         {
-
+            int n = arr.Length;
+            int[] newArr = new int[n + 1];
+            Array.Copy(arr, newArr, n);
+            newArr[n] = val;
+            return newArr;
         }
     }
 }
