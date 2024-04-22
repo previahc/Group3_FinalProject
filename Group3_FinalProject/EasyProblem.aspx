@@ -1,8 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EasyProblem.aspx.cs" Inherits="Group3_FinalProject.EasyProblem" %>
-
-<!DOCTYPE html>
-<!--
-# Name: Jackson Leaphart
+﻿<!--
+# Name: Jackson Leaphart - Group 3
 # email: leaphajp@mail.uc.edu
 # Assignment Title: Final Project
 # Due Date: 4/23/24
@@ -13,6 +10,10 @@ You need to put in a ransom note and a magazine, and it tells you if the letters
 # Citations: IS 3050, W3 Schools
 # Anything else that's relevant:    
 -->
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EasyProblem.aspx.cs" Inherits="Group3_FinalProject.EasyProblem" %>
+
+<!DOCTYPE html>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Easy Question</title>

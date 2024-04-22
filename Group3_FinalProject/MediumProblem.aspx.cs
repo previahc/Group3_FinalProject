@@ -1,4 +1,16 @@
-﻿using System;
+﻿/*
+# Name: Heitor Previatti - Group 3
+# email: previahc@mail.uc.edu
+# Assignment Title: Final Project
+# Due Date: 4/23/24
+# Course: IS 3050
+# Semester/Year: Spring
+# Brief Description: This project goes over the code for a web page that shows the solution to a LeetCode problem
+Transform an integer into a roman numeric.
+# Citations: IS 3050, LeetCode
+# Anything else that's relevant:    
+*/
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;

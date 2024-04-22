@@ -1,4 +1,16 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="Group3_FinalProject.index" %>
+﻿<!--
+# Name: Group 3
+# email: previahc@mail.uc.edu leaphajp@mail.uc.edu
+# Assignment Title: Final Project
+# Due Date: 4/23/24
+# Course: IS 3050
+# Semester/Year: Spring
+# Brief Description: This project goes over the code for a web page that shows the solution to a LeetCode problem
+Homepage with names of participants
+# Citations: IS 3050, LeetCode
+# Anything else that's relevant:    
+-->
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="Group3_FinalProject.index" %>
 
 <!DOCTYPE html>
 

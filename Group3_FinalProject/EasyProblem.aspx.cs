@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-/*
-# Name: Jackson Leaphart
+﻿/*
+# Name: Jackson Leaphart - Group 3
 # email: leaphajp@mail.uc.edu
 # Assignment Title: Final Project
 # Due Date: 4/23/24
@@ -16,6 +10,12 @@ a ransom note and a magazine, and checks if you can create a ransom note using t
 # Citations: ChatGPT 3.5, IS 3050
 # Anything else that's relevant:
 */
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace Group3_FinalProject
 {
