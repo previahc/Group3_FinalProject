@@ -11,7 +11,19 @@ namespace Group3_FinalProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                AddNameToList("Heitor Previatti - Medium");
+                AddNameToList("Jackson Leaphart - Easy");
+                AddNameToList("Patience Huddleston - Hard");
+            }
         }
+
+        private void AddNameToList(string name)
+        {
+            ListItem item = new ListItem(name);
+            nameList.Items.Add(item);
+        }
+
     }
 }
