@@ -1,5 +1,16 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HardProblem.aspx.cs" Inherits="Group3_FinalProject.HardProblem" %>
-
+﻿﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HardProblem.aspx.cs" Inherits="Group3_FinalProject.HardProblem" %>
+<!--
+# Name: Patience Huddleston - Group 3
+# email: huddlepec@mail.uc.edu
+# Assignment Title: Final Project
+# Due Date: 04/23/24
+# Course: IS 3050
+# Semester/Year: Spring 2024
+# Brief Description: This project goes over the code for a web page that shows the solution to a LeetCode problem
+Distribute Elements into Two Arrays
+# Citations: IS 3050, LeetCode, W3Schools
+# Anything else that's relevant: 
+-->
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">

@@ -1,4 +1,16 @@
-﻿using System;
+﻿/*
+# Name: Patience Huddleston - Group 3
+# email: huddlepe@mail.uc.edu
+# Assignment Title: Final Project
+# Due Date: 04/23/24
+# Course: IS 3050
+# Semester/Year: Spring 2024
+# Brief Description: This project goes over the code for a web page that shows the solution to a LeetCode problem
+Distribute Elements into Two Arrays
+# Citations:  IS 3050, W3Schools, Claude.ai, IT1090, LeetCode
+# Anything else that's relevant:
+*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
