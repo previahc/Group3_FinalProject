@@ -1,6 +1,6 @@
 ﻿<!--
 # Name: Group 3
-# email: previahc@mail.uc.edu leaphajp@mail.uc.edu
+# email: previahc@mail.uc.edu leaphajp@mail.uc.edu huddlepec@mail.uc.edu
 # Assignment Title: Final Project
 # Due Date: 4/23/24
 # Course: IS 3050
